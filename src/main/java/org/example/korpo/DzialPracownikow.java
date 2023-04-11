@@ -14,6 +14,7 @@ public class DzialPracownikow {
     private int ID;
 
 
+
     private DzialPracownikow(String name) {
         this.name = name;
         ID = ++dzialID;
