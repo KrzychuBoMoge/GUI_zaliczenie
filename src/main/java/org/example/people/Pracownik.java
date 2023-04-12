@@ -10,6 +10,7 @@ public abstract class Pracownik implements Comparable {
     private boolean czyZdrowy = true;
     public static void Pracownik(String imie, String Nazwisko, Date dataUrodzenia, DzialPracownikow dzial){}
 
+
     @Override
     public int compareTo(Object o) {
         return 0;

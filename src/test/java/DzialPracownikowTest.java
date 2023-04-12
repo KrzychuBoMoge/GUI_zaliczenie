@@ -1,12 +1,14 @@
 import org.example.korpo.DzialPracownikow;
+import org.example.korpo.NotUniqueNameException;
 import org.junit.jupiter.api.*;
 
 public class DzialPracownikowTest{
 
-    @Test
+    @Test()
     public void duplicateDepNameTest(){
-        DzialPracownikow.createDzial("IT");
-        DzialPracownikow.createDzial("IT");
-
+        Assertions.assertThrows(NotUniqueNameException.class, () -> {
+            DzialPracownikow.createDzial("IT");
+            DzialPracownikow.createDzial("it");
+        });
     }
 }

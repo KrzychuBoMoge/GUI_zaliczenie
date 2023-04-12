@@ -20,12 +20,10 @@ public class DzialPracownikow {
         ID = ++dzialID;
     }
 
-    public static void createDzial(String name){
-        try {
-            if (!dzialNameList.contains(name)) dzialNameList.add(name);
-            else throw new NotUniqueNameException("Nazwa: " + name + " nie jest unikalna.");
-        } catch (NotUniqueNameException e) {
-            throw new RuntimeException(e);
-        }
+    public static void createDzial(String name) throws NotUniqueNameException{
+        if (!dzialNameList.contains(name.toLowerCase())) dzialNameList.add(name.toLowerCase());
+        else throw new NotUniqueNameException("Nazwa: " + name + " nie jest unikalna.");
     }
+
+
 }
