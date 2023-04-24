@@ -11,6 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="GUI_I" target="11" />
       <module name="GUI_zaliczenie" target="11" />
     </bytecodeTargetLevel>
   </component>
