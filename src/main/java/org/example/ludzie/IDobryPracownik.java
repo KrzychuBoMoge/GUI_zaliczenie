@@ -1,4 +1,4 @@
-package org.example.people;
+package org.example.ludzie;
 
 public interface IDobryPracownik {
     boolean czyPodatekZerowy();

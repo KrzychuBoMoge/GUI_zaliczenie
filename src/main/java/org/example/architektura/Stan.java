@@ -1,4 +1,4 @@
-package org.example.korpo;
+package org.example.architektura;
 
 public enum Stan {
     Utworzone,

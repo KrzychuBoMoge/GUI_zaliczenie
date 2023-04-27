@@ -1,5 +1,5 @@
-import org.example.korpo.DzialPracownikow;
-import org.example.korpo.NotUniqueNameException;
+import org.example.architektura.DzialPracownikow;
+import org.example.architektura.NotUniqueNameException;
 import org.junit.jupiter.api.*;
 
 public class DzialPracownikowTest{

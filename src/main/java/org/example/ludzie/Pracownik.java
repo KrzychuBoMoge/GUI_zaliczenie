@@ -1,7 +1,8 @@
-package org.example.people;
+package org.example.ludzie;
 
-import org.example.korpo.DzialPracownikow;
+import org.example.architektura.DzialPracownikow;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,10 +10,10 @@ public abstract class Pracownik implements Comparable, IDobryPracownik {
     private static List<Pracownik> pracowniks = new ArrayList<>();
     protected String imie;
     protected String nazwisko;
-    protected String dataUrodzenia;
+    protected LocalDate dataUrodzenia;
     protected DzialPracownikow dzial;
     protected boolean czyZdrowy = true;
-    public Pracownik(String imie, String nazwisko, String dataUrodzenia, DzialPracownikow dzial){
+    public Pracownik(String imie, String nazwisko, LocalDate dataUrodzenia, DzialPracownikow dzial){
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.dataUrodzenia = dataUrodzenia;
@@ -31,6 +32,10 @@ public abstract class Pracownik implements Comparable, IDobryPracownik {
 
     public boolean isCzyZdrowy() {
         return czyZdrowy;
+    }
+
+    public void setCzyZdrowy(boolean czyZdrowy) {
+        this.czyZdrowy = czyZdrowy;
     }
 
     public static List<Pracownik> getPracowniks() {

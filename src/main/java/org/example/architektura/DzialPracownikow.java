@@ -1,6 +1,6 @@
-package org.example.korpo;
+package org.example.architektura;
 
-import org.example.people.Pracownik;
+import org.example.ludzie.Pracownik;
 
 import java.util.ArrayList;
 
@@ -10,8 +10,8 @@ public class DzialPracownikow {
     private static ArrayList<String> dzialNameList = new ArrayList<>();
     private List<Pracownik> pracowniks = new ArrayList<>();
     private String name;
-    private static int dzialID = 0;
-    private int ID;
+    private static long dzialID = 0;
+    private long ID;
 
 
     

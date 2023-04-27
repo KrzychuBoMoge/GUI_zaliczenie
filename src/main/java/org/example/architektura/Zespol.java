@@ -1,11 +1,9 @@
-package org.example.korpo;
+package org.example.architektura;
 
-import org.example.people.Manager;
-import org.example.people.Pracownik;
+import org.example.ludzie.Manager;
+import org.example.ludzie.Pracownik;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class Zespol {
@@ -13,9 +11,14 @@ public class Zespol {
     private Manager manager;
     private List<Pracownik> pracownicy;
 
+    private static long zespolID = 0;
+    private long ID;
+
+
     public Zespol(String nazwa, Manager manager){
         this.nazwa = nazwa;
         this.manager = manager;
+        ID = zespolID++;
     }
 
     public void addEmployee(Pracownik pracownik) throws ManagerCannotBeWorker {
