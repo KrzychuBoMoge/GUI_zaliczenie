@@ -14,6 +14,21 @@ public class Trener extends Pracownik {
 
     @Override
     public String toString() {
-        return imie + " " + nazwisko + " " + dataUrodzenia + " " + specjalizacja + '\n';
+        return imie + " " + nazwisko + " " + dataUrodzenia + " " + dzial + " " + specjalizacja + '\n';
+    }
+
+    @Override
+    public boolean czyPodatekZerowy() {
+        return false;
+    }
+
+    @Override
+    public void przedstawSie() {
+
+    }
+
+    @Override
+    public long getId() {
+        return 0;
     }
 }

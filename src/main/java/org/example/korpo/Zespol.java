@@ -9,15 +9,26 @@ import java.util.Collection;
 import java.util.List;
 
 public class Zespol {
-    String nazwa;
-    Manager manager;
-    List<Pracownik> pracownicy;
+    private String nazwa;
+    private Manager manager;
+    private List<Pracownik> pracownicy;
 
-    public Zespol(String nazwa, Manager manager, Pracownik[] pracownicy){
+    public Zespol(String nazwa, Manager manager){
         this.nazwa = nazwa;
         this.manager = manager;
-        this.pracownicy = Arrays.asList(pracownicy);
     }
 
+    public void addEmployee(Pracownik pracownik) throws ManagerCannotBeWorker {
+        if(pracownik instanceof Manager) throw new ManagerCannotBeWorker("Manager nie może być zwykłym pracownikiem!");
+        else pracownicy.add(pracownik);
+    }
+
+    public void addEmployee(Pracownik[] pracownik) throws ManagerCannotBeWorker {
+        for (Pracownik p :
+                pracownik) {
+            if(p instanceof Manager) throw new ManagerCannotBeWorker("Manager nie może być zwykłym pracownikiem!");
+        }
+        pracownicy.addAll(Arrays.asList(pracownik));
+    }
 
 }

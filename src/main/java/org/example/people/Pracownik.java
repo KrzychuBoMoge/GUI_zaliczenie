@@ -5,7 +5,7 @@ import org.example.korpo.DzialPracownikow;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Pracownik implements Comparable {
+public abstract class Pracownik implements Comparable, IDobryPracownik {
     private static List<Pracownik> pracowniks = new ArrayList<>();
     protected String imie;
     protected String nazwisko;
